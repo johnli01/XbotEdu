@@ -24,8 +24,8 @@ public class ArcadeDriveTest extends BaseDriveTest {
 		command.execute();
 		this.assertDrive(0, 0);
 		
-		left.setY(1.0);
-		left.setX(0.0);
+		left.setY(2.0);
+		left.setX(2.0);
 		command.execute();
 		this.assertDrive(1, 1);
 		
