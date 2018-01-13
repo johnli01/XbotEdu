@@ -9,6 +9,7 @@ public class DriveToPositionCommand extends BaseCommand {
 
 	DriveSubsystem drive;
 	double Setposition; 
+	double changeInError;
 	
 	double oldError;
 	
@@ -41,7 +42,7 @@ public class DriveToPositionCommand extends BaseCommand {
 		
 		
 		double proportion = 4;
-		double dampening = 15;
+		double dampening = 14.35;
 		
 		double error = Setposition-drive.distanceSensor.getDistance();
 		double changeInError = error - oldError;
@@ -58,7 +59,10 @@ public class DriveToPositionCommand extends BaseCommand {
 		// and you're moving fairly slowly (ideally stopped)
 		
 		if (Setposition - drive.distanceSensor.getDistance() <= 0.05) {
+			if (changeInError < 0.1 && changeInError > -0.1) {
+		
 			return true;
+			} 
 		} 
 		return false;
 	}
