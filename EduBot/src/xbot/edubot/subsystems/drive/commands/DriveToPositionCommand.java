@@ -57,9 +57,9 @@ public class DriveToPositionCommand extends BaseCommand {
 		// Modify this to return true once you have met your goal, 
 		// and you're moving fairly slowly (ideally stopped)
 		
-		/* if (Setposition - drive.distanceSensor.getDistance() <= 0.01) {
+		if (Setposition - drive.distanceSensor.getDistance() <= 0.05) {
 			return true;
-		} */
+		} 
 		return false;
 	}
 
