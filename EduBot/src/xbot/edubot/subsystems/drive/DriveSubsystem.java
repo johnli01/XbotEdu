@@ -40,5 +40,8 @@ public class DriveSubsystem {
 		// an example, here is some code that has the frontLeft motor to spin according to
 		// the value of leftPower:
 		frontLeft.set(leftPower);
+		frontRight.set(rightPower);
+		rearLeft.set(leftPower);
+		rearRight.set(rightPower);
 	}
 }
